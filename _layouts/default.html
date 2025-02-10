@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>{{ site.name }}</title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta name="author" content="{{ site.name }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <table
+    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table
+          style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr style="padding:0px">
+            <td style="padding:1%;width:60%;vertical-align:middle">
+              <h1 style="text-align: left;">
+                Matthew X. Burns
+              </h1>
+              <p>Tech nerd focused on the intersection of science and high-performance computing here. Whether your problem is modeling light in a 3D rendering engine, or graphing the electron density of plasma in an ICF chamber, you've got my interest. As a physics major, I'm exposed to the fundamentals of the field, including electromagnetism, quantum theory, classical mechanics, and more. As a computer science major, I direct my attention towards computer systems and algorithm analysis, primarily parallel computing and improving speed and efficiency. Combining a solid grounding in physical science with practical experience in software engineering yields a physically minded software developer who can both use scientific theory to define situations as well as engineer programs to model those situations. Basically, I'm the physical modeling equivalent of the spork, capable of two tasks for the cost of one. If your team is in desperate need of a spork, let me know.
+              </p>
+              <p style="text-align:center">
+                <!-- <a href="#"> Email</a>
+                <span style="color: gray;"> / </span> -->
+                <a href="https://github.com/mxburns2022">GitHub </a>
+                <span style="color: gray;"> / </span>
+                <a href="https://scholar.google.com/citations?user=tsahsHUAAAAJ&hl=en">Google Scholar</a>
+                <span style="color: gray;"> / </span>
+                <a href="https://www.linkedin.com/in/mxburns/"> LinkedIn</a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <img style="width:100%;max-width:100%" alt="profile photo" src="images/avatar.jpeg">
+            </td>
+          </tr>
+        </table>
+
+        <table
+          style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:1%;width:100%;vertical-align:middle">
+              <h2>Research</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <table
+          style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          {% for post in site.posts %}
+          {% for cat in post.categories %}
+          {% if cat == 'research' %}
+          <tr>
+            <!-- <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+            </td> -->
+            <td style="padding:1%;width:75%;vertical-align:middle">
+              <h3>{{post.title}}</h3>
+              <br>
+              {{post.authors}}
+
+              <br>
+              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
+              <br>
+              {% if post.paper %}
+              <a href="{{post.paper}}">paper</a> 
+              {% endif %}
+              {% if post.video %}
+              <a href="{{post.video}}">video</a>
+              {% endif %}
+              {% if post.code %}
+              <a href="{{post.code}}">code</a>
+              {% endif %}
+              {% if post.poster %}
+              <a href="{{post.poster}}">poster</a>
+              {% endif %}
+              {% if post.slides %}
+              <a href="{{post.slides}}">slides</a>
+              {% endif %}
+              {% if post.website %}
+              <a href="{{post.website}}">website</a>
+              {% endif %}
+              {% if post.youtube %}
+              <a href="{{post.youtube}}">youtube</a>
+              {% endif %}
+              <p></p>
+              {{ post.excerpt }}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+      </td>
+    </tr>
+  </table>
+  <footer>
+    <p style="text-align:center; color: #969696;">
+      Template from <a href="https://jonbarron.info">Jon Barron</a>, <a href="https://leonidk.com">Leonid Keselman</a> and <a href="#">Lianlong</a>
+    </p>
+</body>
+
+
+</html>

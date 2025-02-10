@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Combining Cubic Dynamical Solvers with Make/Break Heuristics to Solve SAT"
+date:   2023-08-09 22:21:59 +00:00
+# image: /images/pairwise.png
+categories: research
+author: "Anshujit Sharma"
+authors: "Anshujit Sharma, <strong>Matthew X. Burns</strong>, Michael C Huang"
+venue: "International Conference on Theory and Applications of Satisfiability Testing"
+paper: https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SAT.2023.25
+# code: https://github.com/leonidk/pairwise
+# website: https://leonidk.github.io/pairwise
+---
+Dynamical solvers for combinatorial optimization are usually based on 2superscript{nd} degree polynomial interactions, such as the Ising model. These exhibit high success for problems that map naturally to their formulation. However, SAT requires higher degree of interactions. As such, these quadratic dynamical solvers (QDS) have shown poor solution quality due to excessive auxiliary variables and the resulting increase in search-space complexity. Thus recently, a series of cubic dynamical solver (CDS) models have been proposed for SAT and other problems. We show that such problem-agnostic CDS models still perform poorly on moderate to large problems, thus motivating the need to utilize SAT-specific heuristics. With this insight, our contributions can be summarized into three points. First, we demonstrate that existing make-only heuristics perform poorly on scale-free, industrial-like problems when integrated into CDS. This motivates us to utilize break counts as well. Second, we derive a relationship between make/break and the CDS formulation to efficiently recover break counts. Finally, we utilize this relationship to propose a new make/break heuristic and combine it with a state-of-the-art CDS which is projected to solve SAT problems several orders of magnitude faster than existing software solvers.

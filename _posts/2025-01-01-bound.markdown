@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Provable Accuracy Bounds for Hybrid Dynamical Optimization and Sampling"
+date:   2025-01-01 22:21:59 +00:00
+# image: /images/pairwise.png
+categories: research
+author: "Matthew X. Burns"
+authors: "<strong>Matthew X. Burns</strong>, Qingyuan Hou, Michael C. Huang"
+venue: "ICLR"
+paper: https://arxiv.org/abs/2308.04571
+# code: https://github.com/leonidk/pairwise
+# website: https://leonidk.github.io/pairwise
+---
+Analog dynamical accelerators (DXs) are a growing sub-field in computer architecture research, offering order-of-magnitude gains in power efficiency and latency over traditional digital methods in several machine learning, optimization, and sampling tasks. However, limited-capacity accelerators require hybrid analog/digital algorithms to solve real-world problems, commonly using large-neighborhood local search (LNLS) frameworks. Unlike fully digital algorithms, hybrid LNLS has no non-asymptotic convergence guarantees and no principled hyperparameter selection schemes, particularly limiting cross-device training and inference. In this work, we provide non-asymptotic convergence guarantees for hybrid LNLS by reducing to block Langevin Diffusion (BLD) algorithms. Adapting tools from classical sampling theory, we prove exponential KL-divergence convergence for randomized and cyclic block selection strategies using ideal DXs. With finite device variation, we provide explicit bounds on the 2-Wasserstein bias in terms of step duration, noise strength, and function parameters. Our BLD model provides a key link between established theory and novel computing platforms, and our theoretical results provide a closed-form expression linking device variation, algorithm hyperparameters, and performance.
