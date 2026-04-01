@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<article class="publication">
+    <header class="publication-header">
+        <h2 class="publication-title">{{ page.title }}</h2>
+        <div class="publication-meta">
+            {% if page.authors %}
+            <p class="publication-authors">{{ page.authors }}</p>
+            {% endif %}
+            {% if page.venue %}
+            <p class="publication-venue"><em>{{ page.venue }}</em></p>
+            {% endif %}
+            {% if page.date %}
+            <p class="publication-date">{{ page.date | date: "%Y" }}</p>
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="publication-links">
+        {% if page.paper %}
+        <a href="{{ page.paper }}" class="btn btn-primary" target="_blank" rel="noopener">📄 Paper</a>
+        {% endif %}
+        {% if page.code %}
+        <a href="{{ page.code }}" class="btn btn-primary" target="_blank" rel="noopener">💻 Code</a>
+        {% endif %}
+        {% if page.slides %}
+        <a href="{{ page.slides }}" class="btn btn-primary" target="_blank" rel="noopener">📊 Slides</a>
+        {% endif %}
+        {% if page.video %}
+        <a href="{{ page.video }}" class="btn btn-primary" target="_blank" rel="noopener">🎥 Video</a>
+        {% endif %}
+        {% if page.poster %}
+        <a href="{{ page.poster }}" class="btn btn-primary" target="_blank" rel="noopener">🖼️ Poster</a>
+        {% endif %}
+    </div>
+
+    <div class="publication-content">
+        {{ content }}
+    </div>
+
+    {% if page.tags %}
+    <footer class="publication-tags">
+        {% for tag in page.tags %}
+        <span class="tag">#{{ tag }}</span>
+        {% endfor %}
+    </footer>
+    {% endif %}
+</article>
