@@ -27,6 +27,6 @@ title: Projects
             {% endfor %}
         </div>
     {% else %}
-        <p class="placeholder">No projects yet. Check back soon!</p>
+        <p class="placeholder">Add a Markdown file in <code>_projects/</code> to feature a GitHub project. The required fields are documented in <code>CONTENT_TEMPLATES.md</code>.</p>
     {% endif %}
 </div>
