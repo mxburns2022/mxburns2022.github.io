@@ -12,6 +12,7 @@ title: Home
       <a href="{{ '/publications/' | relative_url }}" class="btn btn-primary">Publications</a>
       <a href="{{ '/preprints/' | relative_url }}" class="btn btn-secondary">Preprints</a>
       <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}" class="btn btn-secondary" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://drive.google.com/file/d/1mvTE6k6IYaaN9soSaxUpqStiIkri14Z3/view?usp=sharing" class="btn btn-secondary" target="_blank" rel="noopener">CV</a>
     </div>
   </div>
 </section>
