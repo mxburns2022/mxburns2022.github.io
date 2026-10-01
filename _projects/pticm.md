@@ -1,7 +1,7 @@
 ---
 title: "PT-ICM"
 description: "MPI-enabled parallel tempering with isoenergetic cluster moves for unconstrained binary optimization"
-github: "https://github.com/mxburns2022/CuLAMP.jl"
+github: "https://github.com/mxburns2022/PT-ICM"
 language: C++
 status: Archived
 tags: [research-software]
