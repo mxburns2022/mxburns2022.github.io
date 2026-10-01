@@ -18,8 +18,8 @@ gem install jekyll bundler
 On macOS (with Homebrew):
 ```bash
 brew install ruby
-echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bashrc_custom
-source ~/.bashrc
+echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc_custom
+source ~/.zshrc
 gem install jekyll bundler
 ```
 
